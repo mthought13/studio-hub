@@ -26,6 +26,21 @@
     else copyText(btn.getAttribute("data-copy"), btn);
   });
 
+  // no autoplaying motion for people who asked the system for less of it: the poster stays
+  var vids = document.querySelectorAll("video[autoplay]");
+  if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    vids.forEach(function (v) { v.removeAttribute("autoplay"); v.pause(); });
+  } else if ("IntersectionObserver" in window) {
+    // play while on screen, pause when scrolled away (browsers may stop muted autoplay on their own)
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { var p = en.target.play(); if (p && p.catch) p.catch(function () {}); }
+        else en.target.pause();
+      });
+    }, { threshold: 0.2 });
+    vids.forEach(function (v) { io.observe(v); });
+  }
+
   function times(n) {
     var d = n % 10, h = n % 100;
     if (d === 1 && h !== 11) return n + " раз";
