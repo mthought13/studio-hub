@@ -1,0 +1,111 @@
+{
+  "title": "Studio Hub",
+  "base_url": "https://mthought13.github.io/studio-hub",
+  "install": "curl -fsSL https://mthought13.github.io/studio-hub/install.sh | bash -s -- <id>",
+  "apps": [
+    {
+      "id": "reftray",
+      "name": "RefTray",
+      "tagline": "Плавающая панель референсов для генераций",
+      "kind": "Приложение",
+      "platform": "macOS 14+ · Apple Silicon и Intel",
+      "version": "1.1",
+      "date": "2026-10-02",
+      "size": 1537991,
+      "sha256": "50d830cccb88824f0e0e905330895b116b97610ec88f46645f73e32747e33897",
+      "download": "https://mthought13.github.io/studio-hub/files/reftray/RefTray-1.1.dmg",
+      "page": "https://mthought13.github.io/studio-hub/apps/reftray/",
+      "agent_md": "https://mthought13.github.io/studio-hub/apps/reftray/AGENT.md",
+      "install": {
+        "type": "dmg",
+        "app": "RefTray.app",
+        "exe": "RefTray",
+        "home": "~/RefTray",
+        "min_macos": "14.0"
+      },
+      "permissions": [
+        "Доступ к Рабочему столу и Загрузкам — для скриншотов и входящих",
+        "Запись экрана — только для кнопки 📸"
+      ]
+    },
+    {
+      "id": "toolbox",
+      "name": "Toolbox",
+      "tagline": "Звук по приложениям, раскладка окон, цвет экранов",
+      "kind": "Виджет в строке меню",
+      "platform": "macOS 14.2+ · Apple Silicon и Intel",
+      "version": "1.2",
+      "date": "2026-10-02",
+      "size": 1742199,
+      "sha256": "db51659ee7367554cf5323e341a6a02d8f5b8cd1b72a55ce4eecfc4e2cf7cb48",
+      "download": "https://mthought13.github.io/studio-hub/files/toolbox/Toolbox-1.2.dmg",
+      "page": "https://mthought13.github.io/studio-hub/apps/toolbox/",
+      "agent_md": "https://mthought13.github.io/studio-hub/apps/toolbox/AGENT.md",
+      "install": {
+        "type": "dmg",
+        "app": "Toolbox.app",
+        "exe": "Toolbox",
+        "home": "~/Toolbox",
+        "min_macos": "14.2",
+        "cli": {
+          "name": "toolbox",
+          "exec": "Contents/MacOS/Toolbox"
+        }
+      },
+      "permissions": [
+        "Запись системного звука («Только системный звук») — для вкладки «Звук»",
+        "Универсальный доступ — для вкладки «Окна»"
+      ]
+    },
+    {
+      "id": "dial",
+      "name": "Dial",
+      "tagline": "Плавающий пульт: громкость, плеер, голосовой ввод",
+      "kind": "Виджет на рабочем столе",
+      "platform": "macOS 13+ · Apple Silicon и Intel",
+      "version": "0.3",
+      "date": "2026-10-02",
+      "size": 1481216,
+      "sha256": "026e95c942389cb488be405e4f4099f06332fb75e6b7d8adb011d636f6355f45",
+      "download": "https://mthought13.github.io/studio-hub/files/dial/Dial-0.3.dmg",
+      "page": "https://mthought13.github.io/studio-hub/apps/dial/",
+      "agent_md": "https://mthought13.github.io/studio-hub/apps/dial/AGENT.md",
+      "install": {
+        "type": "dmg",
+        "app": "Dial.app",
+        "exe": "Dial",
+        "home": "~/Dial",
+        "min_macos": "13.0",
+        "kill": "Dial.app/Contents/Resources/Dial/mac/dial_bridge.py"
+      },
+      "permissions": [
+        "Универсальный доступ — чтобы пульт мог нажимать клавиши",
+        "python3 (Command Line Tools) — для трека и статусов на экране"
+      ]
+    },
+    {
+      "id": "tgfetch",
+      "name": "TgFetch",
+      "tagline": "Файлы из Telegram по просьбе словами",
+      "kind": "Утилита для агента",
+      "platform": "macOS · нужен python3",
+      "version": "1.0",
+      "date": "2026-10-02",
+      "size": 12418,
+      "sha256": "8ae0e870523cd3f504cb21986f558ae75784c6b377150f5e3c308b9e7cefcb5e",
+      "download": "https://mthought13.github.io/studio-hub/files/tgfetch/TgFetch-1.0.zip",
+      "page": "https://mthought13.github.io/studio-hub/apps/tgfetch/",
+      "agent_md": "https://mthought13.github.io/studio-hub/apps/tgfetch/AGENT.md",
+      "install": {
+        "type": "zip",
+        "folder": "TgFetch",
+        "home": "~/TgFetch",
+        "setup": "setup.sh"
+      },
+      "permissions": [
+        "python3 (Command Line Tools)",
+        "Свои api_id и api_hash с my.telegram.org — вход делаешь сам"
+      ]
+    }
+  ]
+}

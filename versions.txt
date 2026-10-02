@@ -1,0 +1,4 @@
+reftray	1.1	dmg	RefTray.app	~/RefTray	RefTray	Пункт «Доступно обновление», свернуть в полоску со счётчиками, трей снова сужается по ширине, проекты задач — выпадающим списком
+toolbox	1.2	dmg	Toolbox.app	~/Toolbox	Toolbox	Пункт «Доступно обновление»
+dial	0.3	dmg	Dial.app	~/Dial	Dial	Пункт «Доступно обновление» в меню
+tgfetch	1.0	zip	-	~/TgFetch	TgFetch	Первая версия на хабе
