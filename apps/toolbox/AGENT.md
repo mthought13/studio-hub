@@ -8,7 +8,7 @@
 | Приложение | `/Applications/Toolbox.app` (или `~/Applications/Toolbox.app`) |
 | Команда | `~/Toolbox/toolbox …` — обёртка над бинарником приложения; если её нет: `/Applications/Toolbox.app/Contents/MacOS/Toolbox …` |
 | Эта инструкция | `~/Toolbox/AGENT.md` |
-| Данные | `~/Library/Application Support/Toolbox/` — `audio-rules.json`, `audio-state.json`, `windows-state.json`, `color.json`, `color-state.json` |
+| Данные | `~/Library/Application Support/Toolbox/` — `audio-presets.json`, `audio-state.json`, `windows-state.json`, `color.json`, `color-state.json` |
 | Автозапуск | `~/Library/LaunchAgents/local.toolbox.plist` (`toolbox autostart on|off`) |
 
 Команды работают, только когда приложение запущено (`open -a Toolbox`). Если `toolbox audio list` ничего не отвечает — запусти его.
@@ -20,10 +20,15 @@ toolbox audio list                                   # устройства, п�
 toolbox audio route "Музыка" "AirPods" --volume 0.8  # APP — имя или bundle id, DEVICE — имя/UID или "default"
 toolbox audio route resolve "Scarlett" --channels 3-4
 toolbox audio route Telegram default --mute
-toolbox audio clear "Музыка"                         # или: clear all
+toolbox audio clear "Музыка"                         # или: clear all (route/clear меняют активный пресет)
+toolbox audio presets                                # пресеты-локации и устройства, которые их включают
+toolbox audio preset "Офис"                          # включить пресет
+toolbox audio auto on|off                            # переключать пресет по подключённым устройствам
+toolbox audio fallback builtin                       # куда играть при отключённом устройстве: builtin | system | имя
 ```
 - Правило хранится по bundle ID и срабатывает, когда приложение начнёт звучать.
-- Отвалилось устройство (Bluetooth) — программа играет в системный выход, при подключении маршрут восстановится сам.
+- Правила лежат в пресетах-локациях («Дом», «Вне дома», «Офис», свои). Автопереключение определяет пресет по внешним устройствам из его правил (встроенные и виртуальные не в счёт): например, «Дом» включается, когда подключены его колонки.
+- Отключилось устройство (наушники, Bluetooth) — программа играет в запасное устройство (по умолчанию динамики Mac), при подключении маршрут восстановится сам.
 - Нужно разрешение «Запись экрана и системного звука» → «Только системный звук». Без него маршруты не создаются, в `audio-state.json` будет ошибка — скажи человеку включить Toolbox там.
 
 ## Окна — раскладка по шаблонам
