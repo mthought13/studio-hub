@@ -24,7 +24,7 @@ curl -fsSL https://mthought13.github.io/studio-hub/install.sh | bash -s -- <id> 
 
 ### RefTray (`reftray`) — Плавающая панель референсов для генераций
 - Окно поверх всех окон. Агент собирает в него референсы под генерацию, а ты перетаскиваешь их мышкой прямо в окно загрузки Seedance, Nano Banana или любого другого сервиса. Там же свежие скриншоты, новые загрузки с раскладкой по проектам, текущие задачи, прогресс генераций и баланс ToAPIs.
-- Версия: 1.3 от 2026-10-09. Платформа: macOS 14+ · Apple Silicon и Intel.
+- Версия: 1.4 от 2026-10-09. Платформа: macOS 14+ · Apple Silicon и Intel.
 - Установка: `curl -fsSL https://mthought13.github.io/studio-hub/install.sh | bash -s -- reftray`
 - Инструкция для агента: https://mthought13.github.io/studio-hub/apps/reftray/AGENT.md (после установки: `~/RefTray/AGENT.md`)
 - Разрешения: Доступ к Рабочему столу и Загрузкам — для скриншотов и входящих; Запись экрана — только для кнопки 📸.
