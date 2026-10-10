@@ -38,7 +38,7 @@ curl -fsSL https://mthought13.github.io/studio-hub/install.sh | bash -s -- <id> 
 
 ### Dial (`dial`) — Плавающий пульт: громкость, плеер, голосовой ввод
 - Круглый пульт поверх всех окон — тот же интерфейс, что у железного M5Stack Dial. Кольцо крутит громкость, клик ставит на паузу любой плеер, 🎙 включает диктовку агенту. На экране трек, статус агента, баланс и генерации ToAPIs. Фокус у окон не забирает.
-- Версия: 0.3 от 2026-10-02. Платформа: macOS 13+ · Apple Silicon и Intel.
+- Версия: 0.4 от 2026-10-10. Платформа: macOS 13+ · Apple Silicon и Intel.
 - Установка: `curl -fsSL https://mthought13.github.io/studio-hub/install.sh | bash -s -- dial`
 - Инструкция для агента: https://mthought13.github.io/studio-hub/apps/dial/AGENT.md (после установки: `~/Dial/AGENT.md`)
 - Разрешения: Универсальный доступ — чтобы пульт мог нажимать клавиши; python3 (Command Line Tools) — для трека и статусов на экране.

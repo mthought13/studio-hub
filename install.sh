@@ -11,7 +11,7 @@ Studio Hub — установка:  curl -fsSL $BASE/install.sh | bash -s -- <п
 
   reftray   RefTray 1.4 — Плавающая панель референсов для генераций
   toolbox   Toolbox 1.3 — Звук по приложениям, раскладка окон, цвет экранов
-  dial      Dial 0.3 — Плавающий пульт: громкость, плеер, голосовой ввод
+  dial      Dial 0.4 — Плавающий пульт: громкость, плеер, голосовой ввод
   tgfetch   TgFetch 1.0 — Файлы из Telegram по просьбе словами
 EOF
 }
@@ -21,7 +21,7 @@ app_info() {
   case "$1" in
   reftray) NAME='RefTray' TYPE=dmg FILE='RefTray-1.4.dmg' VER='1.4' APP='RefTray.app' EXE='RefTray' HOMEDIR="$HOME/RefTray" MINOS='14.0' CLI='' CLIEXEC='' FOLDER='' SETUP='' KILL='' STEPS=('   • Разреши доступ к Рабочему столу и Загрузкам, когда macOS спросит.' '   • Скажи агенту: «Прочитай ~/RefTray/AGENT.md и подключи RefTray».') ;;
   toolbox) NAME='Toolbox' TYPE=dmg FILE='Toolbox-1.3.dmg' VER='1.3' APP='Toolbox.app' EXE='Toolbox' HOMEDIR="$HOME/Toolbox" MINOS='14.2' CLI='toolbox' CLIEXEC='Contents/MacOS/Toolbox' FOLDER='' SETUP='' KILL='' STEPS=('   • Включи разрешения, когда macOS спросит: системный звук и Универсальный доступ.' '   • Скажи агенту: «Прочитай ~/Toolbox/AGENT.md и подключи Toolbox».') ;;
-  dial) NAME='Dial' TYPE=dmg FILE='Dial-0.3.dmg' VER='0.3' APP='Dial.app' EXE='Dial' HOMEDIR="$HOME/Dial" MINOS='13.0' CLI='' CLIEXEC='' FOLDER='' SETUP='' KILL='Dial.app/Contents/Resources/Dial/mac/dial_bridge.py' STEPS=('   • Разреши «Универсальный доступ», когда macOS спросит.' '   • Скажи агенту: «Прочитай ~/Dial/AGENT.md и подключи Dial».') ;;
+  dial) NAME='Dial' TYPE=dmg FILE='Dial-0.4.dmg' VER='0.4' APP='Dial.app' EXE='Dial' HOMEDIR="$HOME/Dial" MINOS='13.0' CLI='' CLIEXEC='' FOLDER='' SETUP='' KILL='Dial.app/Contents/Resources/Dial/mac/dial_bridge.py' STEPS=('   • Разреши «Универсальный доступ», когда macOS спросит.' '   • Скажи агенту: «Прочитай ~/Dial/AGENT.md и подключи Dial».') ;;
   tgfetch) NAME='TgFetch' TYPE=zip FILE='TgFetch-1.0.zip' VER='1.0' APP='' EXE='' HOMEDIR="$HOME/TgFetch" MINOS='0' CLI='' CLIEXEC='' FOLDER='TgFetch' SETUP='setup.sh' KILL='' STEPS=('   • Войди в Telegram сам, в Терминале: ~/TgFetch/login.sh' '   • Скажи агенту: «Прочитай ~/TgFetch/AGENT.md и подключи TgFetch».') ;;
   *) return 1 ;;
   esac
