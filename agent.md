@@ -45,7 +45,7 @@ curl -fsSL https://mthought13.github.io/studio-hub/install.sh | bash -s -- <id> 
 
 ### TgFetch (`tgfetch`) — Файлы из Telegram по просьбе словами
 - Консольная утилита для Claude Code и Codex: находит чат, топик и человека и скачивает присланные файлы в папку проекта. Работает от твоего аккаунта и только читает. Отправка — отдельной командой и только после твоего «да».
-- Версия: 1.0 от 2026-10-02. Платформа: macOS · нужен python3.
+- Версия: 1.1 от 2026-10-12. Платформа: macOS · нужен python3.
 - Установка: `curl -fsSL https://mthought13.github.io/studio-hub/install.sh | bash -s -- tgfetch`
 - Инструкция для агента: https://mthought13.github.io/studio-hub/apps/tgfetch/AGENT.md (после установки: `~/TgFetch/AGENT.md`)
 - Разрешения: python3 (Command Line Tools); Свои api_id и api_hash с my.telegram.org — вход делаешь сам.

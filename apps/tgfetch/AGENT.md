@@ -29,6 +29,7 @@ tgfetch get  CHAT [--topic T] [--from ИМЯ] [--last N] --to ПАПКА [--tray
 ```bash
 tgsend CHAT [--topic T] --file ПУТЬ --caption "текст"          # пробный прогон: показывает, что уйдёт
 tgsend CHAT [--topic T] --file ПУТЬ --caption "текст" --yes    # реально отправить
+tgsend CHAT [--topic T] --text "сообщение" [--yes]              # просто текст без файла (--text @файл.txt — текст из файла, до 4096 символов)
 ```
 `--yes` добавляй только после того, как человек в чате подтвердил точный чат, топик, файл и подпись.
 
@@ -40,6 +41,6 @@ tgsend CHAT [--topic T] --file ПУТЬ --caption "текст" --yes    # реа
    ```markdown
    ## TgFetch — файлы из Telegram
    - `~/TgFetch/tgfetch chats|topics|people|list|get …` (только чтение). Всегда `list`, потом `get`. Подробности: `~/TgFetch/AGENT.md`.
-   - Отправка `~/TgFetch/tgsend … --yes` — только после моего подтверждения точного чата, топика, файла и подписи.
+   - Отправка `~/TgFetch/tgsend … --yes` — только после моего подтверждения точного чата, топика, файла и подписи (или текста сообщения).
    - Код выхода 4 = сессия истекла: я сам запускаю `~/TgFetch/login.sh`.
    ```
